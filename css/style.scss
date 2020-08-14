@@ -1,0 +1,314 @@
+$font-border-color: black;
+$font-desc-color: #002f55;
+
+a{
+    text-decoration: none;
+    display: block;
+}
+
+.lineage{
+    display: inline-block;
+    position: absolute;
+    top: -10000px;
+    left: -10000px;
+}
+ 
+С
+body::-webkit-scrollbar {
+    width: 0px;
+}
+
+
+.input-buffer{
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
+    visibility: hidden;
+    white-space: nowrap;
+}
+
+.ibg{
+    background-color: black;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+    
+.ibg img{
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+body{
+    overflow-x: hidden;
+    font-family: Monotype Corsiva;
+    background-attachment: scroll;
+    background: url(../img/paper.jpg);
+    background-size: 100vw auto;
+    input, select, label, option, textarea{
+        user-select: none;
+        outline: none !important;
+        font-size: 6vmin;
+        background: rgba(0,0,0,0);
+        border: none;
+    }
+
+    select{
+        appearance: none;
+        //border-bottom: 3px solid black;
+        
+    }
+}
+
+.mainwrapper{
+    overflow: hidden;
+    height: 100vh;
+}
+
+
+.header {
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 8vh 0;
+    width: 100vw;
+    .container {
+        width: 90vw;
+        margin: 0 auto;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-content: flex-start;
+       
+        .ava {
+            flex-basis: 35%;
+            flex-shrink: 0;
+           
+            .ava-wrapper{
+                position: relative;
+                height: 100%;
+                border-radius: 25px;
+                position: relative;
+                border-color: rgba(255, 255, 255, 0.6);
+                border-image: none;
+                border-style: double;
+                border-width: 1px;
+                transform: rotate(-10deg);
+                box-shadow: -8px 6px 10px -2px rgba(0,0,0, 0.8);
+            }
+
+            .ava-wrapper:after{
+                border-radius: 25px;
+                content: '';
+                position: absolute;
+                left:0;
+                bottom:0;
+                right: 0;
+                top: 0;
+                background: linear-gradient(
+                280deg,  
+                rgba(255,255,255,0.5) 0%,
+                rgba(255,255,255,0.3) 20%,
+                rgba(255,255,255,0.2) 55%,
+                rgba(0,0,0,0.0) 56%,
+                rgba(0,0,0,0.0) 100%
+                ); /* W3C */
+                border-color: rgba(255, 255, 255, 0.2);        }
+
+
+        }
+
+
+
+        .description {
+            opacity: 0.9;
+            flex-basis: 45%;
+            padding-left: 3vw;
+            transform: skew(5deg);
+            flex-grow: 0;
+            
+            .wrapper {
+                display: flex;
+
+                input, select{
+                    width: 100%;
+                    color: $font-desc-color;
+                    text-shadow: 1px 0 1px $font-border-color, 
+                            0 1px 1px $font-border-color, 
+                            -1px 0 1px $font-border-color, 
+                            0 -1px 1px $font-border-color,
+                            2px 8px 6px rgba(0,0,0,0.2),
+                            0px -5px 35px rgba(255,255,255,0.3);
+;
+                }
+               // justify-content: space-between;
+                label{
+                    width: 4em;
+                }
+
+            }
+        }
+
+
+
+        .mainmenu {
+            white-space: nowrap;
+           flex-basis: 15%;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: flex-start;
+            position: relative;
+            background: rgba(0,0,0,0);
+
+
+            /*.menu-wrapper:active{
+                transition: 5s linear;
+                transform-origin: 50% 50%;
+                transform:  translate(0px,300vh)  rotate(1180deg) ;
+            }*/
+
+
+            .menu-wrapper{
+                position: relative;
+                background: linear-gradient(90deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 8%, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 71%);
+                box-shadow: -4px 10px 4px -2px rgba(0,0,0, 0.2);
+             //   
+             transform: translateX(5px);
+                .button {
+                    position: relative;
+                    font-size: 4vmin;
+                    padding: 25px 2px;
+                 //   padding-top: calc(25px - 3vh);
+                    text-align: center;
+                    color: $font-desc-color;
+                    text-shadow: 1px 0 1px $font-border-color, 
+                            0 1px 1px $font-border-color, 
+                            -1px 0 1px $font-border-color, 
+                            0 -1px 1px $font-border-color;
+                            transform-origin: top;
+                            transform: skew(5deg) translateX(-5px);   
+
+                           // filter: drop-shadow(0 0 3px rgba(100,0,0,0.5) 90deg );
+
+                }
+
+
+
+                .glue{
+                    position: relative;
+                    transform: translateX(-5px);
+                    height: 3vh;
+                }
+
+                .glue:before{
+                    position: absolute;
+                    content: '';
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background: url(../img/paper2.jpg);
+                    opacity: 0.3;
+                }
+
+                .glue:after{
+                    position: absolute;
+                    content: '';
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background: linear-gradient(125deg, rgba(153,153,153,.1) 0%, rgba(0,0,0,.1) 22%, rgba(172,172,172,.1) 100%);
+                }
+
+               .button::before{
+                    position: absolute;
+                    content: '';
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;   
+                    background: url(../img/paper2.jpg);
+                    z-index: -1;
+                    opacity: 0.3;         
+                }
+                .appearance {
+                    background-color: rgb(204,235,197);
+                }
+                .character {
+                    background-color: #fffdd0;
+                }
+                .skills {
+                    background-color: #42b7ff;
+                }
+                .inventory {
+                    background-color: #ffc0cb;
+                }
+        }
+
+
+            .menu-wrapper+.menu-wrapper{
+                margin-top: 2vh;
+            }
+
+        }
+    }
+}
+
+.maincontent {
+    background-attachment: scroll;
+    box-sizing: border-box;
+    min-height: 100vh;
+//display: none;
+
+
+    .container{
+
+        max-width: 1500px;
+        padding: 5vh 5vw;
+        margin: 0 auto;
+        .chapter{
+            height: 100%;
+            .para{
+                margin-top: 5vh;
+                display: flex;
+                align-content: flex-start;
+                .image{
+                    margin-right: 4vmin;
+                    height: 30vh;
+                    flex-basis: 30%;
+                    flex-grow: 0;
+
+                    border-radius: 2vmin;
+                    border-color: rgba(255, 255, 255, 0.6);
+                    border-style: double;
+                    border-width: 1px;
+                }
+                textarea{
+                    line-height: 1.25;
+                //  border: 5px solid rgba(155,117,118, 0.1);
+                    width: 100%;
+                    border-radius: 2vh;
+                    overflow: hidden;
+                    margin: 0 auto;
+                    background-image: url(../img/bg-area.png);
+                    background-repeat: repeat;
+                    resize: none;
+                    background-position: left 0%;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
